@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "eventattendees",
+  "info": {
+    "name": "eventattendees",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "attendees_id": {
+      "type": "integer"
+    },
+    "going": {
+      "type": "string"
+    },
+    "newsuser": {
+      "model": "newsuser",
+      "via": "userattendees"
+    },
+    "user": {
+      "model": "user",
+      "via": "eventattendees",
+      "plugin": "users-permissions"
+    },
+    "event": {
+      "model": "event",
+      "via": "eventattendees"
+    }
+  }
+}

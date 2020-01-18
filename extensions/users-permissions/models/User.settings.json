@@ -1,0 +1,115 @@
+{
+  "connection": "default",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "user_role": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "integer"
+    },
+    "date_of_registration": {
+      "type": "date"
+    },
+    "updated_at": {
+      "type": "date"
+    },
+    "street_line1": {
+      "type": "string"
+    },
+    "organisation": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "pin_code": {
+      "type": "integer"
+    },
+    "profile": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "eventattendees": {
+      "collection": "eventattendees",
+      "via": "user"
+    },
+    "eventfollows": {
+      "collection": "eventfollows",
+      "via": "user"
+    },
+    "claims": {
+      "collection": "claims",
+      "via": "user"
+    },
+    "events": {
+      "collection": "event",
+      "via": "user"
+    }
+  }
+}

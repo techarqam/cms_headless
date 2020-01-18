@@ -1,0 +1,86 @@
+{
+  "connection": "default",
+  "collectionName": "newsuser",
+  "info": {
+    "name": "newsuser",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "member_number": {
+      "type": "string"
+    },
+    "user_role": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "name": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string"
+    },
+    "date_of_registration": {
+      "type": "date"
+    },
+    "updated_at": {
+      "type": "date"
+    },
+    "street_line1": {
+      "type": "string"
+    },
+    "organisation": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "pin_code": {
+      "type": "integer"
+    },
+    "userinterests": {
+      "collection": "userinterest",
+      "via": "newsuser"
+    },
+    "profile": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "userattendees": {
+      "collection": "eventattendees",
+      "via": "newsuser"
+    },
+    "userfollows": {
+      "collection": "eventfollows",
+      "via": "newsuser"
+    },
+    "claim": {
+      "model": "claims",
+      "via": "organiser"
+    },
+    "events": {
+      "collection": "event",
+      "via": "newsuser"
+    }
+  }
+}

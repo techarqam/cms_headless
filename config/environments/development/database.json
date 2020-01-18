@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-mongoose",
+      "settings": {
+        "client": "mongo",
+        "host": "127.0.0.1",
+        "port": 27017,
+        "database": "newslisting",
+        "username": "root",
+        "password": "Rabbit@123"
+      },
+      "options": {
+        "ssl": false
+      }
+    }
+  }
+}

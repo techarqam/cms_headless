@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/claims",
+      "handler": "Claims.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/claims/count",
+      "handler": "Claims.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/claims/:id",
+      "handler": "Claims.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/claims",
+      "handler": "Claims.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/claims/:id",
+      "handler": "Claims.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/claims/:id",
+      "handler": "Claims.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

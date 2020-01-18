@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/eventfollows",
+      "handler": "Eventfollows.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/eventfollows/count",
+      "handler": "Eventfollows.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/eventfollows/:id",
+      "handler": "Eventfollows.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/eventfollows",
+      "handler": "Eventfollows.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/eventfollows/:id",
+      "handler": "Eventfollows.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/eventfollows/:id",
+      "handler": "Eventfollows.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

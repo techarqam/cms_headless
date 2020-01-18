@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "userinterest",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "user_city": {
+      "type": "string"
+    },
+    "date_time": {
+      "type": "date"
+    },
+    "newsuser": {
+      "model": "newsuser",
+      "via": "userinterests"
+    }
+  }
+}

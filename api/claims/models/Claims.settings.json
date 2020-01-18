@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "claims",
+  "info": {
+    "name": "claims",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "organiser": {
+      "model": "newsuser",
+      "via": "claim"
+    },
+    "resolved": {
+      "default": "pending",
+      "required": true,
+      "type": "string"
+    },
+    "user": {
+      "model": "user",
+      "via": "claims",
+      "plugin": "users-permissions"
+    },
+    "event": {
+      "model": "event",
+      "via": "claim"
+    }
+  }
+}

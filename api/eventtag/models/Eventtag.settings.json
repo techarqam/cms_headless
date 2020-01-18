@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "eventtag",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "has_tag_id": {
+      "type": "integer"
+    },
+    "has_tag_name": {
+      "type": "string"
+    },
+    "event": {
+      "model": "event",
+      "via": "eventtags"
+    }
+  }
+}

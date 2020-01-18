@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "eventfollows",
+  "info": {
+    "name": "eventfollows",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "follows_id": {
+      "type": "integer"
+    },
+    "follow": {
+      "type": "string"
+    },
+    "newsuser": {
+      "model": "newsuser",
+      "via": "userfollows"
+    },
+    "user": {
+      "model": "user",
+      "via": "eventfollows",
+      "plugin": "users-permissions"
+    },
+    "event": {
+      "model": "event",
+      "via": "eventfollows"
+    }
+  }
+}

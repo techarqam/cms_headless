@@ -1,0 +1,103 @@
+{
+  "connection": "default",
+  "collectionName": "event",
+  "info": {
+    "name": "event",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "event_id": {
+      "type": "integer"
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "all_day": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "attachments": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "location": {
+      "type": "string"
+    },
+    "event_link": {
+      "type": "string"
+    },
+    "share_permission": {
+      "type": "string"
+    },
+    "eventtags": {
+      "collection": "eventtag",
+      "via": "event"
+    },
+    "newsuser": {
+      "model": "newsuser",
+      "via": "events"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "event_pic": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "who_can_attend": {
+      "type": "string"
+    },
+    "do_not_repeat": {
+      "type": "string"
+    },
+    "is_approved": {
+      "required": true,
+      "default": "pending",
+      "type": "string"
+    },
+    "createdby": {
+      "required": true,
+      "type": "string"
+    },
+    "user": {
+      "model": "user",
+      "via": "events",
+      "plugin": "users-permissions"
+    },
+    "eventattendees": {
+      "collection": "eventattendees",
+      "via": "event"
+    },
+    "eventfollows": {
+      "collection": "eventfollows",
+      "via": "event"
+    },
+    "claim": {
+      "model": "claims",
+      "via": "event"
+    }
+  }
+}
